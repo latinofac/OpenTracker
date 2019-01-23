@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8752B216-2E16-4773-A93E-E0FCDCE1CA4B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenTracker</RootNamespace>
+    <AssemblyName>OpenTracker</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions.cs" />
+    <Compile Include="Cards.cs" />
+    <Compile Include="CashGameConfig.cs" />
+    <Compile Include="CashGamePlayersView.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="FormCashConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCashConfig.Designer.cs">
+      <DependentUpon>FormCashConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCashResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCashResults.Designer.cs">
+      <DependentUpon>FormCashResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFilterHands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFilterHands.Designer.cs">
+      <DependentUpon>FormFilterHands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHands.Designer.cs">
+      <DependentUpon>FormHands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHoldem6Max.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoldem6Max.Designer.cs">
+      <DependentUpon>FormHoldem6Max.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHoldem9Max.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoldem9Max.Designer.cs">
+      <DependentUpon>FormHoldem9Max.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainCashGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainCashGame.Designer.cs">
+      <DependentUpon>FormMainCashGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainTournaments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainTournaments.Designer.cs">
+      <DependentUpon>FormMainTournaments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSessions.Designer.cs">
+      <DependentUpon>FormSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupport.Designer.cs">
+      <DependentUpon>FormSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTournamentsConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTournamentsConfig.Designer.cs">
+      <DependentUpon>FormTournamentsConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandGames.cs" />
+    <Compile Include="HandLoader.cs" />
+    <Compile Include="HandPlayers.cs" />
+    <Compile Include="Hands.cs" />
+    <Compile Include="HandsSession.cs" />
+    <Compile Include="HandsTournaments.cs" />
+    <Compile Include="HandView.cs" />
+    <Compile Include="HandViewer.cs" />
+    <Compile Include="Images.cs" />
+    <Compile Include="Players.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultsView.cs" />
+    <Compile Include="Sessions.cs" />
+    <Compile Include="SQL.cs" />
+    <Compile Include="Tournaments.cs" />
+    <EmbeddedResource Include="FormCashConfig.resx">
+      <DependentUpon>FormCashConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCashResults.resx">
+      <DependentUpon>FormCashResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFilterHands.resx">
+      <DependentUpon>FormFilterHands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHands.resx">
+      <DependentUpon>FormHands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHoldem6Max.resx">
+      <DependentUpon>FormHoldem6Max.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHoldem9Max.resx">
+      <DependentUpon>FormHoldem9Max.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainCashGame.resx">
+      <DependentUpon>FormMainCashGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainTournaments.resx">
+      <DependentUpon>FormMainTournaments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSessions.resx">
+      <DependentUpon>FormSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupport.resx">
+      <DependentUpon>FormSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTournamentsConfig.resx">
+      <DependentUpon>FormTournamentsConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cashGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\tourney.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\sessions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\hands.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\results.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\loading.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\config2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cleardb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\greenCard.jpg" />
+    <None Include="Images\whiteCard.jpg" />
+    <None Include="Images\support2.jpg" />
+    <Content Include="TODO.txt" />
+    <None Include="Images\button.png" />
+    <None Include="Images\redCard.jpg" />
+    <None Include="Images\Table.png" />
+    <None Include="Images\Ts.jpg" />
+    <None Include="Images\Th.jpg" />
+    <None Include="Images\Td.jpg" />
+    <None Include="Images\Tc.jpg" />
+    <None Include="Images\2c.jpg" />
+    <Content Include="Images\2d.jpg" />
+    <Content Include="Images\2h.jpg" />
+    <Content Include="Images\2s.jpg" />
+    <Content Include="Images\3c.jpg" />
+    <Content Include="Images\3d.jpg" />
+    <Content Include="Images\3h.jpg" />
+    <Content Include="Images\3s.jpg" />
+    <Content Include="Images\4c.jpg" />
+    <Content Include="Images\4d.jpg" />
+    <Content Include="Images\4h.jpg" />
+    <Content Include="Images\4s.jpg" />
+    <Content Include="Images\5c.jpg" />
+    <Content Include="Images\5d.jpg" />
+    <Content Include="Images\5h.jpg" />
+    <Content Include="Images\5s.jpg" />
+    <Content Include="Images\6c.jpg" />
+    <Content Include="Images\6d.jpg" />
+    <Content Include="Images\6h.jpg" />
+    <Content Include="Images\6s.jpg" />
+    <Content Include="Images\7c.jpg" />
+    <Content Include="Images\7d.jpg" />
+    <Content Include="Images\7h.jpg" />
+    <Content Include="Images\7s.jpg" />
+    <Content Include="Images\8c.jpg" />
+    <Content Include="Images\8d.jpg" />
+    <Content Include="Images\8h.jpg" />
+    <Content Include="Images\8s.jpg" />
+    <Content Include="Images\9c.jpg" />
+    <Content Include="Images\9d.jpg" />
+    <Content Include="Images\9h.jpg" />
+    <Content Include="Images\9s.jpg" />
+    <Content Include="Images\Ac.jpg" />
+    <Content Include="Images\Ad.jpg" />
+    <Content Include="Images\Ah.jpg" />
+    <Content Include="Images\As.jpg" />
+    <Content Include="Images\Jc.jpg" />
+    <Content Include="Images\Jd.jpg" />
+    <Content Include="Images\Jh.jpg" />
+    <Content Include="Images\Js.jpg" />
+    <Content Include="Images\Kc.jpg" />
+    <Content Include="Images\Kd.jpg" />
+    <Content Include="Images\Kh.jpg" />
+    <Content Include="Images\Ks.jpg" />
+    <Content Include="Images\Qc.jpg" />
+    <Content Include="Images\Qd.jpg" />
+    <Content Include="Images\Qh.jpg" />
+    <Content Include="Images\Qs.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
