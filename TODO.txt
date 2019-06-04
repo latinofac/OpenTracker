@@ -1,0 +1,8 @@
+﻿Releases 1.1
+- Otimização do filtro de mãos e resultados;
+- Ordenação dos torneios por data/hora;
+- Inclusão da versão do software.
+- Separado os blinds das apostas dos jogadores;
+
+TODO
+- Criar parte de Omaha.
